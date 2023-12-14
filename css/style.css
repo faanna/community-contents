@@ -1,0 +1,169 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.community {
+  width: 100%;
+  position: relative;
+}
+.community .inner {
+  width: 1180px;
+  margin: 50px auto;
+  padding: 0px 20px;
+  position: relative;
+}
+.community .inner .center-line {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #000;
+}
+.community .inner .center-line .scroll-icon {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  font-size: 25px;
+  text-align: center;
+  line-height: 40px;
+  color: #ff7979;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.15), 0 3px 0 4px rgba(0, 0, 0, 0.15);
+  /* 먼저 바깥 영영으로 흰색의 선을 부여합니다
+              안쪽에 한번 더 그림자를 부여하고, 바깥쪽에 마지막으로 그림자를 더 부여
+              x축 / y축 / 블러 / 퍼지는효과 / 색
+              =>보통은 바깥으로 퍼지는것이 그림자 효과이지만
+              inset을 설정하면 안쪽으로 퍼지는 그림자가능하다
+              */
+}
+.community .inner .row {
+  display: flex;
+}
+.community .inner .row section {
+  background-color: #eee;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+}
+.community .inner .row section::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #ff7979;
+  position: absolute;
+  top: 28px;
+  transform: rotate(45deg);
+}
+.community .inner .row section .icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  text-align: center;
+  line-height: 40px;
+  color: #ff7979;
+  font-size: 17px;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.15), 0 3px 0 4px rgba(0, 0, 0, 0.15);
+}
+.community .inner .row section .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.community .inner .row section .details .title {
+  font: 600 22px/1 "arial";
+}
+.community .inner .row section .details span:nth-of-type(2) {
+  font: 16px/1 "arial";
+  color: #333;
+}
+.community .inner .row section p {
+  margin: 10px 0px 17px 0px;
+  font: 18px/1.2 "arial";
+  color: #111;
+}
+.community .inner .row section .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.community .inner .row section .bottom a {
+  display: block;
+  background-color: #ff7979;
+  padding: 7px 15px;
+  border-radius: 5px;
+  color: #fff;
+  font: 15px/1 "arial";
+}
+.community .inner .row section .bottom i {
+  font-size: 16px;
+  color: #555;
+}
+.community .inner .row-1 {
+  justify-content: flex-start;
+}
+.community .inner .row-1 section .icon {
+  top: 15px;
+  right: -60px;
+}
+.community .inner .row-1 section::before {
+  right: -7px;
+  z-index: -1;
+}
+.community .inner .row-2 {
+  justify-content: flex-end;
+}
+.community .inner .row-2 section .icon {
+  top: 15px;
+  left: -60px;
+}
+.community .inner .row-2 section::before {
+  left: -7px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1179px) {
+  .community .inner {
+    width: 100%;
+  }
+  .community .inner .center-line {
+    left: 40px;
+  }
+  .community .inner .row {
+    display: flex;
+    margin: 30px 0px 3px 60px;
+  }
+  .community .inner .row section {
+    width: 100%;
+  }
+  .community .inner .row section::before {
+    left: -7px;
+  }
+  .community .inner .row section .icon {
+    left: -60px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
